@@ -15,7 +15,7 @@ Update the `3-music-collection.js` file to do the following:
 
 ### Required Features
 
-- Create an empty array named `myCollection`.
+- [x]Create an empty array named `myCollection`.
 
 - Create a function named `addToCollection`. It should have this basic structure:
   - ```js
