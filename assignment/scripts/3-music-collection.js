@@ -12,7 +12,7 @@ function addToCollection (collection, title, artist, yearPublished){
   collection.push(album);
   return album;
 }
-addToCollection(myCollection,'Once upon a time', 'Ivona', 1998);
+addToCollection(myCollection,'Once upon a time', 'Senka', 1998);
 addToCollection(myCollection,'Good stuff', 'Carlos', 1998);
 addToCollection(myCollection,'Keep your head up', 'Ivan', 1989);
 addToCollection(myCollection,'Do not trust', 'Ilija', 1987);
@@ -27,8 +27,17 @@ function showCollection(collection){
 };
 console.log(showCollection(myCollection));
 
-
-
+function findByArtist(collection, artist ){
+let albumsBySameArtist = [];
+  for (let songs of collection){
+    if(songs.artist === artist){
+      albumsBySameArtist.push(songs);
+    }
+  };
+  return albumsBySameArtist;
+};
+console.log('Songs by Senka are', findByArtist(myCollection, "Senka"));
+console.log('No such artist', findByArtist(myCollection, "Ivona"));
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
